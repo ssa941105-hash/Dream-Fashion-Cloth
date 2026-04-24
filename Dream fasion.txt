@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dream Fashion</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f8f8;
+            text-align: center;
+        }
+        h1 {
+            background: #ff69b4;
+            color: white;
+            padding: 15px;
+        }
+        .product {
+            background: white;
+            border: 1px solid #ddd;
+            margin: 20px;
+            padding: 15px;
+            display: inline-block;
+            width: 220px;
+        }
+        img {
+            width: 100%;
+        }
+        button {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Dream Fashion</h1>
+<h2>Three Piece Collection</h2>
+
+<div class="product">
+    <img src="dress1.jpg">
+    <h3>Red Three Piece</h3>
+    <p>Price: 1500 Tk</p>
+    <button onclick="orderNow('Red Three Piece', '1500 Tk')">Buy Now</button>
+</div>
+
+<div class="product">
+    <img src="dress2.jpg">
+    <h3>Blue Three Piece</h3>
+    <p>Price: 1400 Tk</p>
+    <button onclick="orderNow('Blue Three Piece', '1400 Tk')">Buy Now</button>
+</div>
+
+<div class="product">
+    <img src="dress3.jpg">
+    <h3>Green Three Piece</h3>
+    <p>Price: 1600 Tk</p>
+    <button onclick="orderNow('Green Three Piece', '1600 Tk')">Buy Now</button>
+</div>
+
+<script>
+function orderNow(name, price) {
+    let phone = "8801815623221"; // 
+    let message = "Hello Dream Fashion,%0A I want to order:%0A Product: " + name + "%0A Price: " + price;
+    let url = "https://wa.me/" + phone + "?text=" + message;
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
